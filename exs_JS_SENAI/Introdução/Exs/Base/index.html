@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8"> <!-- Seleciona a cadeia de caracteres para o padrão de acentução que usamos no português -->
+        <link rel="stylesheet" type="text/css" href="styles.css" /> <!-- Faz o link para o caminho do arquivo css-->
+        <title>Manipulando o Estilo do Site pela DOM</title> <!-- Nome da abinha do navegador  -->
+    </head>
+    <body>
+        <div id="manipula">
+            <p>Com base nos argumentos apresentados na aula, é possivel entender que
+            uma coisa é uma coisa e outra coisa é outra coisa, admito que não concordo nem discordo,
+            muito pelo contrario.</p> 
+            <p class="paragrafo">É factivel que a Terra é um dos planetas mais conhecidos
+            do mundo, mesmo sabendo que a vida é uma sucessão de sucessivos que sucedem sucessivamente sem cessar. 
+            Agora, mais do que nunca, é a hora, afinal, o importante é o que importa, pois onde quer que você esteja,
+            você sempre estará lá.</p>
+            <p class="creditos">
+                Your compiuter has virus - 2021
+            </p>
+        </div>
+        <br>
+        <hr>
+
+        <div class="Meio">
+            <h2 class="chamada">Altere o texto acima clicando nos botões</h2>
+        </div>
+
+<div class="Meio">
+    <div id="botoes">
+        <input type="button" value="Padrão" onclick="window.location.reload()"/> 
+        <input type="button" value="Tamanho" onclick="Fonte()"/> 
+        <input type="button" value="Escuro" onclick="Escuro()"/>
+        <input type="button" value="Não clique aq!!" onclick="nao()"/>
+        <input type="button" value="Créditos" onclick="creditos()"/>
+        <input type="button" value="jooj" onclick="botaoCor()"/>
+        <input type="button" value="q isso meo??" onclick="botaoCorTD()"/>
+        <input type="button" value="conta" onclick="conta()"/>
+        <input type="button" value="ilegivel" onclick="ile()"/>
+        <input type="button" value="Fundo" onclick="fundo()"/>
+        <input type="button" value="img" onclick=" img()"/>
+    
+    </div>    
+</div>
+
+<div class="Meio">
+    <img id="image" src="xuxa.jpg">
+</div>
+
+        <script> //começa a brincadeira com JavaScript
+
+            function Fonte()
+            {
+                document.getElementById("manipula").style.fontSize = "40px"
+            }
+
+            function Escuro()
+            {
+                document.getElementById("manipula").style.backgroundColor = "black"
+                document.getElementById("manipula").style.color = "white"
+            }
+
+            function nao()
+            {
+                document.getElementsByClassName("chamada")[0].innerHTML = "Eu falei pra n clicar!!"
+            }
+
+            function creditos()
+            {
+                document.getElementById("manipula").getElementsByClassName("creditos")[0].style.display = "block"
+            }
+
+            function botaoCor()
+            {
+                document.getElementsByTagName("input")[5].style.backgroundColor = "pink"
+            }
+
+            function botaoCorTD()
+            {
+                var x = document.getElementsByTagName("input")
+                var y
+
+                for(y = 0; y < x.length; y++)
+                {
+                    x[y].style.backgroundColor = "black"
+                }
+            }
+
+            function conta()
+            {
+                let x = document.getElementsByTagName("input")
+                document.getElementById("manipula").innerHTML = x.length
+            }
+
+            function ile()
+            {
+                document.querySelector("p.paragrafo").innerHTML = "joooooooj"
+            }
+
+            function fundo()
+            {
+                document.querySelector("body").style.backgroundColor = "blue"
+            }
+
+            function img()
+            {
+                var img = document.querySelector("#image")
+                img.setAttribute("src", "alien.jpg")
+            }
+
+        </script> <!-- termina a brincadeira com JavaScript -->
+    </body>
+</html>

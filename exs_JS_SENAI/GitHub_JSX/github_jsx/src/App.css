@@ -1,0 +1,59 @@
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+}
+
+.cab
+{
+  height: 50px;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+}
+
+.cabp
+{
+  text-transform: uppercase;
+  padding-left: 20px;
+}
+
+.search
+{
+  margin-top: 20px;
+  width: 100%;
+  height: 200px;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.area
+{
+  width: 50%;
+  height: 100%;
+
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.forms
+{
+  padding-bottom: 10px;
+}
+.titulo
+{
+  color: white;
+}
+
+.tabela
+{
+  border: white 1px solid;
+  width: 100%;
+}
+.tabela th
+{
+  color: white;
+}
